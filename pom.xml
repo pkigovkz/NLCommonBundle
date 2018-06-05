@@ -53,6 +53,18 @@
             <version>LATEST</version>
             <optional>true</optional>
         </dependency>
+        <dependency>
+            <groupId>kz.gov.pki.kalkan</groupId>
+            <artifactId>knca_provider_jce_kalkan</artifactId>
+            <version>0.4</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.santuario</groupId>
+            <artifactId>xmlsec</artifactId>
+            <version>1.5.8</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -144,7 +156,7 @@
                             <storepass>${jarsigner.storepass}</storepass>
                             <verbose>${jarsigner.verbose}</verbose>
                             <certs>true</certs>
-                            <!--<tsa>http://tsp.pki.gov.kz/</tsa>-->
+                            <tsa>http://tsp.pki.gov.kz/</tsa>
                         </configuration>
                     </execution>
                 </executions>
